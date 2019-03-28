@@ -1,48 +1,48 @@
 {
     "projects": [
         {
-            "id": "",
-            "project_name": "",
-            "description": "",
-            "technologies": "",
-            "live_link": "https://",
-            "github_link": "",
+            "id": "0",
+            "project_name": "Random Quote Generator",
+            "description": "Random quotes by Rumi and Hafiz displayed upon click or time-out",
+            "technologies":["HTML", "CSS", "JavaScript"],
+            "live_link": "https://lisasea.github.io/Project-1/",
+            "github_link": "https://github.com/lisasea/Project-1.git", //.git ?
             "image_urls": [""]
         },
         {
-            "id": "",
-            "project_name": "",
-            "description": "",
-            "technologies": "",
-            "live_link": "https://",
-            "github_link": "",
+            "id": "1",
+            "project_name": "List Pagination and Filtering",
+            "description": "From a list of students display 10 students per page",
+            "technologies": ["HTML", "CSS", "Vanilla JavaScript"],
+            "live_link": "https://lisasea.github.io/Project-2/",
+            "github_link": "https://github.com/lisasea/Project-2.git",
             "image_urls": [""]
         },
         {
-            "id": "",
-            "project_name": "",
-            "description": "",
-            "technologies": "",
-            "live_link": "https://",
-            "github_link": "",
+            "id": "2",
+            "project_name": "Form Validation",
+            "description": "A conference registration form",
+            "technologies": ["HTML", "CSS", "JavaScript", "JQuery"],
+            "live_link": "https://lisasea.github.io/Project-3/",
+            "github_link": "https://github.com/lisasea/Project-3.git",
             "image_urls": [""]
         },
         {
-            "id": "",
-            "project_name": "",
-            "description": "",
-            "technologies": "",
-            "live_link": "https://",
-            "github_link": "",
+            "id": "3",
+            "project_name": "Guess the Phrase Game",
+            "description": "Guess letters and try to solve a phrase made famous by Shakespear in 5 tries or less",
+            "technologies": ["HTML", "CSS", "Object Oriented JavaScript"],
+            "live_link": "https://lisasea.github.io/Project-4/",
+            "github_link": "https://github.com/lisasea/Project-4.git",
             "image_urls": [""]
         },
         {
-            "id": "",
-            "project_name": "",
-            "description": "",
-            "technologies": "",
-            "live_link": "https://",
-            "github_link": "",
+            "id": "4",
+            "project_name": "Public API Request",
+            "description": "An employee directory gallery created using Flikr random api fetching",
+            "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "AJAX"],
+            "live_link": "https://lisasea.github.io/Project-5/",
+            "github_link": "https://github.com/lisasea/project-5.git",
             "image_urls": [""]
         }
     ]
