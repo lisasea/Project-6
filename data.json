@@ -1,3 +1,49 @@
-const projects = {
-    projects: []
+{
+    "projects": [
+        {
+            "id": "",
+            "project_name": "",
+            "description": "",
+            "technologies": "",
+            "live_link": "https://",
+            "github_link": "",
+            "image_urls": [""]
+        },
+        {
+            "id": "",
+            "project_name": "",
+            "description": "",
+            "technologies": "",
+            "live_link": "https://",
+            "github_link": "",
+            "image_urls": [""]
+        },
+        {
+            "id": "",
+            "project_name": "",
+            "description": "",
+            "technologies": "",
+            "live_link": "https://",
+            "github_link": "",
+            "image_urls": [""]
+        },
+        {
+            "id": "",
+            "project_name": "",
+            "description": "",
+            "technologies": "",
+            "live_link": "https://",
+            "github_link": "",
+            "image_urls": [""]
+        },
+        {
+            "id": "",
+            "project_name": "",
+            "description": "",
+            "technologies": "",
+            "live_link": "https://",
+            "github_link": "",
+            "image_urls": [""]
+        }
+    ]
 }
