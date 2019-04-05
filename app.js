@@ -29,7 +29,7 @@ app.use((err, req, res, next) => { //error handler
 
 
 
-app.listen(3000, () => {
+app.listen(3000, () => { //set up local host and test console.log
     console.log('HoooRay!!! app.listen local host 3000 is working!');
 });
 
