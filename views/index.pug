@@ -13,7 +13,7 @@ block content
       each project in projects
         .cell
           a(href=`/projects/${project.id}`) 
-            img.thumbnail(src=`${project.image_urls[0]}`)
+            img.thumbnail(src=`/static/images/${project.image_urls[0]}`)
             h5= `${project.project_name}`
 
       //- xxx a(href=`${id}?side=${sideToShow}`)  Use the Pug `each` iterator to create a projet img, title and link in the markup for each of the projects you are showcasing.  
@@ -22,8 +22,4 @@ block content
       
       //- Here's what the Pug for each project example should look like. 
 
-      .cell
-        a(href='#')
-          img.thumbnail(src='https://placehold.it/550x550')
-          h5 Title
       
