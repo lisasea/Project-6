@@ -24,6 +24,7 @@ app.get('/project/:id', (req, res) => {
 
 app.use((req, res, next) => { //error handler
     const err = new Error('Not Found');
+    console.log('Oops! This page can not be found.')
     err.status = 404;
     next(err);
 });
@@ -40,6 +41,10 @@ app.listen(3000, () => { //set up local host and test console.log
     console.log('HoooRay!!! app.listen local host 3000 is working!');
 });
 
+/*
+app.get('/', (req, res) => {
+    res.send('');
+});
 /*
 app.get('/', (req, res) => {
     res.send('');
