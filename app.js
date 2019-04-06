@@ -1,6 +1,7 @@
 const express = require('express'); //get Express dependency module
 const data = require('./data.json'); // './data.json.projects?'
 const projects = data.projects;
+const path = require('path'); //trying to get express.static working correctly?
 const app = express();
 
 app.set('view engine', 'pug'); //tell express (set the view engine) to use pug
@@ -12,8 +13,14 @@ app.get('/', (req, res) => { // '/index' ?
 }); 
 
 app.get('/about', (req, res) => {
-    res.render('about', { projects });
+    res.render('about');
 }); 
+
+app.get('/project/:id', (req, res) => {
+    const id = req.params.id;
+    const allProjects = projects[id];
+    res.render('project', allProjects);
+}
 
 app.use((req, res, next) => { //error handler
     const err = new Error('Not Found');
