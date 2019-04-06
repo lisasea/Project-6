@@ -20,7 +20,7 @@ app.get('/project/:id', (req, res) => {
     const id = req.params.id;
     const allProjects = projects[id];
     res.render('project', allProjects);
-}
+});
 
 app.use((req, res, next) => { //error handler
     const err = new Error('Not Found');
