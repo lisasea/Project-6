@@ -1,44 +1,42 @@
 const express = require('express'); //get Express dependency module
+const app = express();
 const data = require('./data.json'); // './data.json.projects?'
 const projects = data.projects;
 const path = require('path'); //trying to get express.static working correctly?
-const app = express();
 
-app.set('view engine', 'pug'); //tell express (set the view engine) to use pug
+
+app.set('view engine', 'pug'); //tell express set the view engine to use pug
 
 app.use('/static', express.static('public')); // serve static files - images, CSS files, and JavaScript files in a directory named public 
 
-app.get('/', (req, res) => { // '/index' ?
+app.use('/', (req, res) => { // '/index' ?
     res.render('index', { projects } ); // data.projects? Indasia in directions data.projects?
 }); 
 
-app.get('/about', (req, res) => {
-    res.render('about');
+app.use('/about', (req, res) => {
+    res.render('about'); //('index', { projects }); need to pass in projects as 2nd parameter
 }); 
 
-app.get('/project/:id', (req, res) => {
-    const id = req.params.id;
-    const allProjects = projects[id];
-    res.render('project', allProjects);
+app.use('/projects/:id', (req, res) => {
+    const { id } = req.params;
+    res.render('project', { id, projects });
 });
 
-app.use((req, res, next) => { //error handler
+app.use((req, res, next) => { //should this be app.get? error handler
     const err = new Error('Not Found');
     console.log('Oops! This page can not be found.')
     err.status = 404;
     next(err);
 });
 
-app.use((err, req, res, next) => { //error handler
+app.use((err, req, res, next) => { //should this be app.get? error handler
     res.locals.error = err;
     res.status(err.status); //read status property we just set
     res.render('error');
 });
 
-
-
 app.listen(3000, () => { //set up local host and test console.log
-    console.log('HoooRay!!! app.listen local host 3000 is working!');
+    console.log('This app is running on local host 3000. It is working!');
 });
 
 /*
@@ -70,6 +68,6 @@ xxuse a static route and the express.static method to serve the static files loc
 xxSet your routes. You'll need:
 xxAn "index" route (/) to render the "Home" page with the locals set to data.projects
 xxAn "about" route (/about) to render the "About" page
-Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
+?? trouble. Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
 Finally, start your server. Your app should listen on port 3000, and log a string to the console that says which port the app is listening to. 
 */
