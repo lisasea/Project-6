@@ -7,21 +7,24 @@ block content
     .grid-x
       .cell.small-6.medium-9.large-9
 
-        h1 #{projects[id].project_name}
+        h1 #{project.project_name}
 
         p.lead.text-light
-          | #{projects[id].description}
+          | #{project.description}
 
       .cell.portfolio-meta.small-6.medium-2.large-3
-        h6 #{projects[id].technologies}
+        h6 Technologies
+        #{project.technologies}
 
         ul
-          each technology in techonologies
+          each technology in project.techonologies
             li #{technology}
 
-        a.button.expanded(href=`${live_link}`) Live Demo
-        a.button.expanded(href=`${github_link}`) GitHub Repo
-    
-    img.image(src='/static/images/Project-1.png')
-    img.image(src='/static/images/Project-1b.png')
-    img.image(src='/static/images/Project-1c.png')
+        a.button.expanded(href=`${project.live_link}`) Live Demo
+        a.button.expanded(href=`${project.github_link}`) GitHub Repo
+
+
+    img.image(src=`/static/images/${project.image_urls[0]}`)  
+    img.image(src=`/static/images/${project.image_urls[1]}`)
+    img.image(src=`/static/images/${project.image_urls[2]}`) 
+   

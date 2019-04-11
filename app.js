@@ -1,7 +1,6 @@
 const express = require('express'); //get Express dependency module
 const app = express();
-const data = require('./data.json'); // './data.json.projects?'
-const projects = data.projects;
+const { projects } = require('./data.json');
 const path = require('path'); //trying to get express.static working correctly?
 
 
@@ -9,20 +8,21 @@ app.set('view engine', 'pug'); //tell express set the view engine to use pug
 
 app.use('/static', express.static('public')); // serve static files - images, CSS files, and JavaScript files in a directory named public 
 
-app.use('/', (req, res) => { // '/index' ?
+app.get('/', (req, res) => { // '/index' ? 
     res.render('index', { projects } ); // data.projects? Indasia in directions data.projects?
 }); 
 
-app.use('/about', (req, res) => {
+app.get('/about', (req, res) => {
     res.render('about'); //('index', { projects }); need to pass in projects as 2nd parameter
 }); 
 
-app.use('/projects/:id', (req, res) => {
+app.get('/projects/:id', (req, res) => {
     const { id } = req.params;
-    res.render('project', { id, projects });
+    const project = projects[id];
+    res.render('project', { project });
 });
 
-app.use((req, res, next) => { //should this be app.get? error handler
+app.use((req, res, next) => { // error handler
     const err = new Error('Not Found');
     console.log('Oops! This page can not be found.')
     err.status = 404;
