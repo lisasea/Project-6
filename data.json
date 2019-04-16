@@ -7,7 +7,7 @@
             "technologies":["HTML", "CSS", "JavaScript"],
             "live_link": "https://lisasea.github.io/Project-1/",
             "github_link": "https://github.com/lisasea/Project-1.git",
-            "image_urls": ["Project-1.png", "Project-1b.png"]
+            "image_urls": ["Project-1a.png", "Project-1b.png", "Project-1c.png"]
         },
         {
             "id": "1",
@@ -16,7 +16,7 @@
             "technologies": ["HTML", "CSS", "Vanilla JavaScript"],
             "live_link": "https://lisasea.github.io/Project-2/",
             "github_link": "https://github.com/lisasea/Project-2.git",
-            "image_urls": [""]
+            "image_urls": ["Project-2a.png", "Project-2b.png", "Project-2c.png"]
         },
         {
             "id": "2",
@@ -25,7 +25,7 @@
             "technologies": ["HTML", "CSS", "JavaScript", "JQuery"],
             "live_link": "https://lisasea.github.io/Project-3/",
             "github_link": "https://github.com/lisasea/Project-3.git",
-            "image_urls": [""]
+            "image_urls": ["Project-3a.png", "Project-3b.png", "Project-3c.png"]
         },
         {
             "id": "3",
@@ -34,7 +34,7 @@
             "technologies": ["HTML", "CSS", "Object Oriented JavaScript"],
             "live_link": "https://lisasea.github.io/Project-4/",
             "github_link": "https://github.com/lisasea/Project-4.git",
-            "image_urls": [""]
+            "image_urls": ["Project-4a.png", "Project-4b.png", "Project-4c.png"]
         },
         {
             "id": "4",
@@ -43,7 +43,7 @@
             "technologies": ["HTML", "CSS", "JavaScript", "JQuery", "AJAX"],
             "live_link": "https://lisasea.github.io/Project-5/",
             "github_link": "https://github.com/lisasea/project-5.git",
-            "image_urls": [""]
+            "image_urls": ["Project-5a.png", "Project-5b.png", "Project-5c.png"]
         }
     ]
 }
