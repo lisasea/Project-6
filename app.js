@@ -1,22 +1,21 @@
 const express = require('express'); //get Express dependency module
 const app = express();
-const { projects } = require('./data.json');
-const path = require('path'); //trying to get express.static working correctly?
-
+const { projects } = require('./data.json'); //import data
+const path = require('path'); 
 
 app.set('view engine', 'pug'); //tell express set the view engine to use pug
 
 app.use('/static', express.static('public')); // serve static files - images, CSS files, and JavaScript files in a directory named public 
 
-app.get('/', (req, res) => { // '/index' ? 
-    res.render('index', { projects } ); // data.projects? Indasia in directions data.projects?
+app.get('/', (req, res) => { // set index route
+    res.render('index', { projects } ); // 
 }); 
 
-app.get('/about', (req, res) => {
-    res.render('about'); //('index', { projects }); need to pass in projects as 2nd parameter
+app.get('/about', (req, res) => { // set about route
+    res.render('about'); //
 }); 
 
-app.get('/projects/:id', (req, res) => {
+app.get('/projects/:id', (req, res) => { // set projects route
     const { id } = req.params;
     const project = projects[id];
     res.render('project', { project });
@@ -29,7 +28,7 @@ app.use((req, res, next) => { // error handler
     next(err);
 });
 
-app.use((err, req, res, next) => { //should this be app.get? error handler
+app.use((err, req, res, next) => { //error handler
     res.locals.error = err;
     res.status(err.status); //read status property we just set
     res.render('error');
@@ -38,36 +37,3 @@ app.use((err, req, res, next) => { //should this be app.get? error handler
 app.listen(3000, () => { //set up local host and test console.log
     console.log('This app is running on local host 3000. It is working!');
 });
-
-/*
-app.get('/', (req, res) => {
-    res.send('');
-});
-/*
-app.get('/', (req, res) => {
-    res.send('');
-});
-*/
-
-//const path = require('path');  //optional to set up static
-//const bodyParser = require('body-parser'); // get body parser middleware
-
-
-// control + back tic brings up the terminal in visual studio code
-// node app.js written in terminal to view the project
-
-/*
-XXCreate an app.js file at the root of your directory.
-xxAdd variables to require the necessary dependencies. You'll need to require:
-xxExpress
-xxYour data.json file
-xxOptionally - the path module which can be used when setting the absolute path in the express.static function.
-xxSet up your middleware:
-xxset your “view engine” to “pug”
-xxuse a static route and the express.static method to serve the static files located in the public folder
-xxSet your routes. You'll need:
-xxAn "index" route (/) to render the "Home" page with the locals set to data.projects
-xxAn "about" route (/about) to render the "About" page
-?? trouble. Dynamic "project" routes (/project or /projects) based on the id of the project that render a customized version of the Pug project template to show off each project. Which means adding data, or "locals", as an object that contains data to be passed to the Pug template.
-Finally, start your server. Your app should listen on port 3000, and log a string to the console that says which port the app is listening to. 
-*/
