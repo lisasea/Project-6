@@ -3,7 +3,7 @@
     Site built using Static Node.js and Express 
 
 Initialized project
-  Used command line to navigate to project, and ran the npm init command to set up package.json file
+  Use command line to navigate to project, and ran the npm init command to set up package.json file
 Added dependencies
   Express and Pug installed via the command line
 Created .gitignore file
