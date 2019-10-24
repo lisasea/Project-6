@@ -2,12 +2,15 @@
     Portfolio to showcase JavaScript projects
     Site built using Static Node.js and Express 
 
-## To Launch ##
+## To Launch: ##
 1. Navigate to project in command line
 2. Run "npm start" 
 3. Navigate to localhost:3000 in browser
 
-### /project_starter_files ###
+
+## Project Structure: ##
+
+### /project_starter_files ### 
 Mockup pages, CSS and starter Pug templates
 
 ### /public ###
@@ -22,7 +25,7 @@ Project description, links to images and github
 ### index.js ###
 Main page - run from Node
 
-## Routes ##
+## Routes: ##
 Routes are defined using Express get() and use() methods
 
 ### / (home) ###
@@ -37,18 +40,18 @@ The /project route searches the project data for an id that is the same as the U
 ### not-defined routes ###
 If a route is not defined the catch-all handler creates an error object with status code 404 and forwards it to the general error handler.
 
-## Exceeds Expectations Tasks ##
+## Exceeds Expectations Tasks: ##
 
-### error handler ###
+### Error Handler ###
 Error handling middleware and error.pug file.
 The general error handler renders a page using an error.pug template which displays the error message, status code and stack.
 Set up "friendly" error handlers and sets status code using error.pug template to display the error message, status code and stack. If status code is 404 an "error 404" image is displayed instead of the error message and status code.
 
-### npm start ### 
+### NPM Start ### 
     
 ### Customized Layout, CSS and Styles ###
-Background color
-Button color
-Hover color
-Box shadow
+    Background color
+    Button color
+    Hover color
+    Box shadow
         
