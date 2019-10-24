@@ -1,52 +1,54 @@
-# Treehouse FSJS Project-6
+# Treehouse FSJS Portfolio
     Portfolio to showcase JavaScript projects
     Site built using Static Node.js and Express 
 
-Initialized project
-  Use command line to navigate to project, and ran the npm init command to set up package.json file
-Added dependencies
-  Express and Pug installed via the command line
-Created .gitignore file
-Created an images folder to store images
-  Added a profile pic
-  Added screenshots of projects
-  Added main shot for the landing page
-Added project data to directory
-Created a data.json file at the root of the directory
-  Each project object contains the following properties:
-    id 
-    digit number starting at 0 
-    project_name
-    description
-    technologies 
-    live_link - link to the live version of the project
-    github_link 
-    image_urls  
+## To Launch ##
+1. Navigate to project in command line
+2. Run "npm start" 
+3. Navigate to localhost:3000 in browser
 
-Setup server, routes and middleware
-Created an app.js file at the root of the directory
-Added variables to require the necessary dependencies:
-  Express
-  Data.json file
-  The path module used in setting the absolute path in the   express.static function.
-Set up middleware:
-  set “view engine” to “pug”
-  static route and the express.static method to serve the static files located in the public folder
-Set routes:
-  An "index" route (/) that renders the "Home" page with the locals set to data.projects
-  An "about" route (/about) that renders the "About" page
-  Dynamic "project" routes (/project or /projects) based on the id of the project that renders a customized version of the Pug project template to show off each project. Adds data, or "locals", as an object that contains data to be passed to the Pug template.
-Start server / listening on port 3000
-Set up "friendly" error handlers and sets status code
-Pug templates set to inject data
-Set live links to projects
+### /project_starter_files ###
+Mockup pages, CSS and starter Pug templates
 
-Exceeds Expectations Tasks:
-    npm start //gleaned from stackoverflow.com
-    error handling middleware and error.pug file
-    Customized Layout, CSS and Styles
-        background color
-        button color
-        hover color
-        box shadow
+### /public ###
+Static files: CSS, images and client-side scripts
+
+### /views ###
+Pug templates for page rendering
+
+### data.json ###
+Project description, links to images and github
+
+### index.js ###
+Main page - run from Node
+
+## Routes ##
+Routes are defined using Express get() and use() methods
+
+### / (home) ###
+Main page displaying various projects. Project data is read from data.json. Page is rendered using index.pug
+
+### /about ###
+Information about my background, programming skills and contact info rendered using about.pug
+
+### /project/... ###
+The /project route searches the project data for an id that is the same as the URL segment following /project/. If one is found the project data is passed to the project.pug template for rendering the project page. If a project is not found the catch-all handler generates a 404 error.
+
+### not-defined routes ###
+If a route is not defined the catch-all handler creates an error object with status code 404 and forwards it to the general error handler.
+
+## Exceeds Expectations Tasks ##
+
+### error handler ###
+Error handling middleware and error.pug file.
+The general error handler renders a page using an error.pug template which displays the error message, status code and stack.
+Set up "friendly" error handlers and sets status code using error.pug template to display the error message, status code and stack. If status code is 404 an "error 404" image is displayed instead of the error message and status code.
+
+### npm start ### 
+    
+### Customized Layout, CSS and Styles ###
+Background color
+Button color
+Hover color
+Box shadow
         
