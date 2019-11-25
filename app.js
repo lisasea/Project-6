@@ -34,6 +34,8 @@ app.use((err, req, res, next) => { //error handler
     res.render('error');
 });
 
-app.listen(3000, () => { //set up local host and test console.log
-    console.log('This app is running on local host 3000. It is working!');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => { //set up local host and test console.log
+    console.log('This app is running on http://localhost:'+port+' . It is working!');
 });

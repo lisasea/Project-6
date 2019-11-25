@@ -7,6 +7,12 @@
 2. Run "npm start" 
 3. Navigate to localhost:3000 in browser
 
+## To run on Heroku
+```
+heroku create
+git push heroku master
+```
+
 
 ## Project Structure: ##
 
